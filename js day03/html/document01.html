@@ -1,0 +1,40 @@
+<!-- 2번 : getElementById-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>getElementById</title>
+</head>
+
+<body>
+   <div id="myDiv">div요소</div>
+   <p></p>
+</body>
+<script>
+   const myDiv = document.getElementById("myDiv")
+   //mydiv 라는 엘리멘트 요소를 const 객체에 저장 
+   console.log(myDiv, typeof myDiv);
+   const p1 = document.querySelector("p");
+   console.log(p1, typeof p1);
+   p1.innerText = "<h1>안녕</h1>";
+   p1.innerHTML = "<h1>안녕</h1>";
+</script>
+
+</html>
+
+<!-- dom tree -->
+body
+|  |_ <div id="myDiv">div요소</div>
+|  |_ <p></p>
+|
+|_ script
+   |  |__ const myDiv = document.getElementById("myDiv")
+   |_____ console.log(myDiv, typeof myDiv);
+   |_____ const p1 = document.querySelector("p");
+   |_____ console.log(p1, typeof p1);
+   |_____ p1.innerText = "<h1>안녕</h1>";
+   |_____ p1.innerHTML = "<h1>안녕</h1>";
+
+   
