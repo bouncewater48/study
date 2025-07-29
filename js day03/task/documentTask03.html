@@ -17,8 +17,20 @@
   </div>
 </body>
 <script>
-  // getElementsByTagName을 사용하여 모든 li요소 선택하기
-  // 선택된 모든 li요소에 list-item 클래스 추가하기
-  // 마지막 li요소의 배경색을 lightblue로 변경하기
+  // 1) getElementsByTagName을 사용하여 모든 li요소 선택하기
+  // 2) 선택된 모든 li요소에 list-item 클래스 추가하기
+  // 3) 마지막 li요소의 배경색을 lightblue로 변경하기
+
+  // 1)
+  const li = document.getElementsByTagName('li');
+
+  // 2)
+  for (let i = 0; i < li.length; i++) {
+    li[i].classList.add('list-item');
+  }
+
+  // 3)
+  li[li.length - 1].style.backgroundColor = 'lightblue';
+  
 </script>
 </html>

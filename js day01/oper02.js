@@ -35,7 +35,7 @@ console.log(null >> value);
 console.log(undefined ?? null);
 console.log(value ?? null)
 
-//옵셔널 체이닝 ?.
+//옵셔널 체이닝 ?:
 let users = {
   profile : { name : null, age :5 },
 };

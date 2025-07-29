@@ -26,7 +26,7 @@ const newArr2 = arr2.map(function(element){
 })
 console.log(newArr2); // [4, 3, 10, 4, 3 ]
 
-// 배열의 각 객체 특ㄱ정 프로퍼티 값을 새로운 배열로 반환
+// 배열의 각 객체 특정 프로퍼티 값을 새로운 배열로 반환
 const users1 = [
   {name : '짱구', age : 5},
   {name : '철수', age : 5},

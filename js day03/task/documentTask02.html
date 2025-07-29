@@ -14,9 +14,19 @@
   </ul>
 </body>
 <script>
-  // 클래스 이름을 추가하고 li요소의 텍스트를 새아이템입니다로 변경하기
-  // 첫번째 li요소에는 css선택자를 사용하여 글자 색상을 red로 변경하기
-  const list = document.querySelector("li");
+  // 1) 클래스 이름을 추가하고 li요소의 텍스트를 새아이템입니다로 변경하기
+  // 2) 첫번째 li요소에는 css선택자를 사용하여 글자 색상을 red로 변경하기
   
+   const listItems = document.querySelectorAll('ul li');
+
+// 1)
+     listItems.forEach((li, index) => {
+    li.classList.add('my-item'); 
+    li.textContent = '새아이템입니다'; 
+  });
+
+// 2)
+    listItems[0].style.color = 'red';
+
 </script>
 </html>
