@@ -63,6 +63,9 @@ public class MaPtest01 {
 package mapTest;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Set;
 
 // 2번 : 메뉴에 맞는 값 출력하기
 public class MapTest02 {
@@ -96,7 +99,7 @@ public class MapTest02 {
 //		containsValue
 //		Value에 해당 값이 들어있는지 true, false로 확인 가능
 		System.out.println(coffee.containsValue(2000));
-
+		
 //		Iterator
 //		keySet -> key만 가져오기
 		System.out.println(coffee.keySet());
@@ -141,8 +144,10 @@ public class MapTest02 {
 //			entry를 활용해서 한쌍씩 출력
 			
 		}
+		
 	}
 }
+
 
 
 
