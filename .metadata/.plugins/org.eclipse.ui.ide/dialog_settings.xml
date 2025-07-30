@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\web_0900_ksh\java\workspace"/>
 			<item value="D:\web_0900_ksh\Java\workspace\Calc"/>
 			<item value="D:\web_0900_ksh\Java\workspace\day7\src"/>
 			<item value="D:\web_0900_ksh\Java\workspace\Java_series\src\Mento0630"/>

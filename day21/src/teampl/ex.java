@@ -1,0 +1,65 @@
+package teampl;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+class ex extends User{{
+	public LoginManager(String name, String userid, String password, String phone_number) {
+			super(name, userid, password, phone_number);
+		}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+	// 로그인 정보 저장 Map
+		 Map<String, String> loginmap = new HashMap<>();
+	 //id,pw 추가
+		loginmap.put("11", "1111");
+		loginmap.put("22", "2222");
+		loginmap.put("33", "3333");
+
+		while(true){
+//			id 입력
+			System.out.print("id : " );
+			String id = sc.nextLine();
+//			pw 입력
+			System.out.print("pw : " );
+			String pw = sc.nextLine();
+			
+			if(!loginmap.containsKey(id)) {
+				System.out.println("Id를 잘못 입력하셨습니다");
+			}else{
+//				id1에 대응되는 pw 확인
+				if(!loginmap.get(id).equals(pw)) {
+					System.out.println("pw를 잘못 입력하셨습니다. 다시 입력해주세요");
+					continue;
+				}else {
+					 LoginManager loginManager = new LoginManager("홍길동", id, pw, "010-1234-5678") {
+	                     @Override
+	                     public boolean login(String inputId, String inputPw) {
+	                         return false;
+	                     }
+
+	                     @Override
+	                     public boolean bookSerch(String serch) {
+	                         return false;
+	                     }
+
+	                     @Override
+	                     public void borrowBooks(String bookTitle) {
+	                     }
+
+	                     @Override
+	                     public void bookReturn(String bookTitle) {
+	                    	 }
+	                 };
+
+	                 System.out.println("로그인 성공!" + loginManager.getName() + "님 환영합니다!");
+				}return;
+			}
+				}
+	}
+	}
+
+}
