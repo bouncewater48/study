@@ -30,7 +30,7 @@ let user = null;
 let value = "default value";
 
 console.log(user, typeof user, value, typeof value);
-//         null   ibject     defuatl value, string
+//         null   object     defuatl value, string
 console.log(null >> value);
 console.log(undefined ?? null);
 console.log(value ?? null)
