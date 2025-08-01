@@ -6,6 +6,12 @@
 		<column name="Size" visible="true" order="2" width="100"/>
 		<column name="Last modified" visible="true" order="3" width="100"/>
 	</item>
+	<item id="NodeList/DataSourceDescriptor">
+		<column name="Name" visible="true" order="0" width="100"/>
+		<column name="Description" visible="true" order="1" width="100"/>
+		<column name="Origin" visible="true" order="2" width="100"/>
+		<column name="Driver Type" visible="true" order="3" width="100"/>
+	</item>
 	<item id="NodeList/OracleSchema">
 		<column name="Name" visible="true" order="0" width="130"/>
 	</item>
@@ -99,10 +105,10 @@
 		<column name="Comment" visible="true" order="5" width="68"/>
 	</item>
 	<item id="scriptSelectorViewer">
-		<column name="Script" visible="true" order="0" width="174"/>
-		<column name="Time" visible="true" order="1" width="185"/>
-		<column name="Info" visible="true" order="2" width="70"/>
-		<column name="Folder" visible="true" order="3" width="82"/>
+		<column name="Script" visible="true" order="0" width="137"/>
+		<column name="Time" visible="true" order="1" width="197"/>
+		<column name="Info" visible="true" order="2" width="82"/>
+		<column name="Folder" visible="true" order="3" width="94"/>
 	</item>
 	<item id="sqlFilterValueEditPopup">
 		<column name="Value" visible="true" order="0" width="150"/>

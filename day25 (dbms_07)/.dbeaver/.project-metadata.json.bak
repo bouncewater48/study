@@ -1,1 +1,1 @@
-{"resources":{"Scripts/Script.sql":{"default-datasource":"oracle_thin-1981ba823a3-4b0df236f72f4a0b","default-schema":"HR"}}}
+{"resources":{"Scripts/Script.sql":{"default-datasource":"oracle_thin-1981cb8edfd-75fd73b65173cbf8","default-schema":"TEST"},"Scripts/day07(조인).sql":{"default-schema":"HR","default-datasource":"oracle_thin-1981ba823a3-4b0df236f72f4a0b"},"Scripts/day07(집합, view, 시퀀스).sql":{"default-schema":"HR","default-datasource":"oracle_thin-1981ba823a3-4b0df236f72f4a0b"}}}

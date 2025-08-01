@@ -1,0 +1,58 @@
+
+-- 사용자 정보를 저장하는 유저테이블
+-- 유저번호, 아이디, 패스워드, 이름, 나이, 성별, 생일
+
+CREATE SEQUENCE SEQ_USER;
+
+CREATE TABLE TBL_USER(
+	USER_NUMBER NUMBER,
+
+
+
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

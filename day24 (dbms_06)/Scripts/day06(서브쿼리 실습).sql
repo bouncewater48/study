@@ -89,6 +89,7 @@ FROM EMPLOYEES e
 WHERE DEPARTMENT_ID IN (SELECT DEPARTMENT_ID
 	FROM DEPARTMENTS
 	WHERE DEPARTMENT_ID = 60);
+
 --GROUP BY DEPARTMENT_ID;
 --GROUP BY DEPARTMENT_NAME;
 --HAVING DEPARTMENT_NAME = 'IT';
@@ -187,51 +188,3 @@ WHERE SALARY < (SELECT AVG(SALARY) FROM EMPLOYEES);
 -- IN : 여러 값 중 포함 여부 판단
 -- ANY : 하나라도 조건을 만족하면 TRUE
 -- ALL : 전부 조건을 만족해야함
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
