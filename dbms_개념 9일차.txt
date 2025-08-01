@@ -1,0 +1,107 @@
+day27 (jdbc 9일차)
+복습 -> 회원탈퇴 -> WEB(HTML, CSS)
+
+0. 복습
+1) MVC패턴(MVC 구조)
+	소프트웨어 디자인 패턴
+	모든 어플리케이션은 개발에 들어가기 전에 설계가 필수이다
+	JAVA를 활용한 웹 어플리케이션의 설계 방식 중 대표적인 것이 MVC 패턴이다
+
+	M(Model)	DB에서 조회된 결과값을 담기 위한 변수들이 선언된 클래스
+			클래스명 뒤에 VO, DTO를 붙여준다
+
+	V(VIEW)		사용자에게 보여질 화면을 구성하는 부분
+			Controller에 선언된 메소드를 사용하는 부분
+
+	C(Controller)	DB에 접근할 수 있는 메소드들이 선언된 클래스
+			접근 후 결과값이 있을 경우 Model 객체에 담아서 처리
+			클래스명 뒤에 DAO를 붙여준다
+
+2) JDBC 사용 순서
+	JDBC Driver 로딩
+		DB에 맞는 드라이버를 로딩한다
+	Connection
+		드라이버 연결 후 커넥션 객체를 얻어낸다
+		커낵션 객체를 정상적으로 얻어냈다면 dbms와 정상 연결이 된 것이다
+	PreparedStatement
+		JDBC를 통해 DBMS에 보낼 쿼리를 관리해주는 인터페이스
+		executeQuery() / executeUpdate() 메소드를 통해 쿼리를 날린다
+	ResultSet
+		쿼리의 결과를 받을 때 사용하는 인터페이스
+		DBMS에서 실행한 쿼리의 결과는 테이블 형태라는 사실을 주의해야함!!
+	Close()
+		항상 DB와 연결해서 사용한 객체들은 close()를 통해 연결을 닫아줘야한다
+		가져온 순서에서 역순으로 다시 닫아주기!
+
++) 참고 try~with~resource 방식
+
+	try(Connection connection = DriverManager.getConnection()){
+		//작업 수행
+	}catch(SQLException e){
+		//예외 처리
+	} //자동으로 connection.close() 호출됨
+
+
++) MVC 패턴과 MVC2 패턴
+1) MVC 패턴
+	초창기 자바 웹 개발구조(JSP 중심)
+	Model : Java 클래스(DB처리, 비즈니스 로직)
+	View : JSP(화면 + 일부로직포함)
+	Controller : JSP 또는 Servlet
+
+흐름 :	사용자가 jsp에 직접 요청 -> jsp 안에서 java코드로 db처리 -> 그 결과를 화면에 출력
+특징 : 	JSP에 비즈니스 로직이 섞여있으므로 유지보수 힘듦
+	View(JSP)와 Controller(JSP)가 혼합됨
+
+2) MVC2(Model2)
+	Servlet + JSP 역할 분리 모델
+	현재 대부분의 웹 프레임워크에서 이 구조를 따름
+
+	Model : DTO, DAO, Service 등
+	View : JSP(순수 화면만 담당)
+	Controller : Servlet(모든 요청을 받아서 처리 흐름 제어)
+
+흐름 : 사용자가 servlet에 요청 -> servlet이 Model 호출해서 처리(DAO -> DB)
+	-> 결과를 request.setAttribute()로 담아 RequestDispatcher.forward()로 jsp로 이동
+	-> JSP는 그 값만 출력
+	특징 : 역할이 명확히 분리됨
+		유지보수 용이
+		확장성 좋음
+
++) Spring MVC
+	MVC2(Model2) 구조를 프레임워크화 시킨 것
+	@Controller, @Service, @Repository, @RequestMapping 등이 servlet + JSP의 역할을 더 체계적으로 분리해주는 구조
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
